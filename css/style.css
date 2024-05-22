@@ -1,0 +1,117 @@
+body {
+    background-color: blanchedalmond;
+}
+
+.svg1 {
+    width: 100px;
+    height: 100px;
+    margin: 100px;
+    transform: perspective(100px) rotateX(60deg);
+}
+
+.svg2 {
+    width: 120px;
+    height: 120px;
+    fill: aqua;
+    stroke: black;
+    stroke-width: 0.5px;
+    transform-origin: left top;
+    transform: rotate(45deg);
+}
+
+.svg3 {
+    display: inline-block;
+    font-size: 100px;
+    color: red;
+    /* transition: color 1.5s, transform 1s; */
+    transition: all 0.5s ease-in-out 2s;
+}
+
+/* transition all для всех свойств. увеличивает загрузку системы лучше указывать конкретные */
+
+.svg3:hover {
+    /* font-size: 150px;  не применяется к тексту*/
+    transform: scale(1.2);
+    color: blue;
+    transition: all 1s ease-in-out 2s;
+}
+
+.svg4 {
+    font-size: 40px;
+    color: blueviolet;
+    text-decoration: none;
+}
+
+.svg4::after {
+    content: "\F557";
+    font-family: "bootstrap-icons";
+    margin-left: 10px;
+}
+
+.svg5 {
+    width: 100px;
+    height: 100px;
+}
+
+.block {
+    background: url(../img/фон.jpg) center/ 120% no-repeat;
+    width: 400px;
+    height: 400px;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.link1 {
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: blue;
+    transition: all 0.5s ease-in-out;
+}
+
+.link1::after {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: blue;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.5s;
+}
+
+.link1:hover::after,
+.link1:focus::after {
+    transform: scaleX(1);
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(700px);
+    }
+}
+
+.track {
+    width: 800px;
+    height: 300px;
+    background-color: yellowgreen;
+}
+
+.circle1 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: red;
+    animation: move 3s linear;
+}
+
+.circle2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: blue;
+    animation: move 3s ease-in-out;
+}
