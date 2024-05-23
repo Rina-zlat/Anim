@@ -362,6 +362,8 @@ div>button{
     height: 60px;
     margin: 40px;
     padding: 0;
+    overflow: hidden;
+    border: solid;
  }
 
  .btn4 button{
@@ -373,7 +375,8 @@ div>button{
     border: 0 solid black;
     border-radius: 0;
     position: relative;
-    transition: transform 0.4s;
+    transition: transform 1.4s;
+    margin: 0;
  }
 
 .btn4 button::after{
