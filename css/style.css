@@ -375,7 +375,6 @@ div>button{
     border: 0 solid black;
     border-radius: 0;
     position: relative;
-    transition: transform 1.4s;
     margin: 0;
  }
 
@@ -390,9 +389,10 @@ div>button{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 1.4s;
 }
 
-.btn4:hover button,
-.btn4:focus button{
+.btn4:hover button::after,
+.btn4:focus button::after{
     transform: translateX(-100%);
 }
