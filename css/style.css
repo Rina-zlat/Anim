@@ -209,18 +209,22 @@ body {
 .btn2{
     margin: 50px;
     border: none;
+    padding: 0;
+    background: none;
 }
 
 .btn2 span{
+    display: block;
     width: 100%;
     height: 100%;
     padding: 5px 10px;
-    color: darkmagenta;
     background-color: bisque;
+    color: darkmagenta;
     transition: transform 0.3s ease-in-out;
 }
 
-.btn2:hover,
-.btn2:focus{
+.btn2:hover span,
+.btn2:focus span{
     transform: translateY(-20px);
 }
+
